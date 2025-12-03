@@ -226,3 +226,72 @@
 
 // Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
 // методи sum і mult мають повертати рядок 'No such propeties'
+
+//? Рішення:
+//   let calculator = {
+//   read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+
+//   exist() {
+//     return this.a !== undefined && this.b !== undefined;
+//   },
+
+//   sum() {
+//     if (!this.exist()) {
+//       return "No such properties";
+//     }
+//     return this.a + this.b;
+//   },
+
+//   mult() {
+//     if (!this.exist()) {
+//       return "No such properties";
+//     }
+//     return this.a * this.b;
+//   },
+// };
+
+// calculator.read(30, 45);
+
+// console.log(calculator.mult());
+
+//! Завдання 10:
+// Напишіть функцію calcTotalPrice(fruits, fruitName),
+// яка приймає массив об'єктів (fruits) і рядок з назвою фрукта (fruitName).
+// Функція рахує і повертає загальну вартість фрукта
+// з таким ім'ям, ціною та кількістю з об'єкта.
+
+// Зверніть увагу, що в масиві може бути кілька обʼєктів з однаковою
+// назвою фрукта, це також треба урахувати.
+
+// const fruits = [
+//     { name: "Яблуко", price: 45, quantity: 7 },
+//     { name: "Апельсин", price: 60, quantity: 4 },
+//     { name: "Банан", price: 125, quantity: 8 },
+//     { name: "Груша", price: 350, quantity: 2 },
+//     { name: "Виноград", price: 440, quantity: 3 },
+//     { name: "Банан", price: 125, quantity: 3 },
+//   ];
+
+//? Рішення:
+//    const fruits = [
+//   { name: "Яблуко", price: 45, quantity: 7 },
+//   { name: "Апельсин", price: 60, quantity: 4 },
+//   { name: "Банан", price: 125, quantity: 8 },
+//   { name: "Груша", price: 350, quantity: 2 },
+//   { name: "Виноград", price: 440, quantity: 3 },
+//   { name: "Банан", price: 125, quantity: 3 },
+// ];
+
+// function calcTotalPrice(fruits, fruitName) {
+//   let total = 0;
+//   for (let frukt of fruits) {
+//     if (frukt.name === fruitName) {
+//       total = total + frukt.price * frukt.quantity;
+//     }
+//   }
+//   return total;
+// }
+// console.log(calcTotalPrice(fruits, "Яблуко"));
