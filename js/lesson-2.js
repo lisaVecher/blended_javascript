@@ -126,3 +126,103 @@
 // }
 
 // console.log(findSmallestNumber([2, 5, 35, 56, 12, 24, 7, 80, 3]));
+
+//! Завдання 6:
+// Напишіть функцію findLongestWord(string), яка
+// приймає довільний рядок, що складається лише зі слів, розділених
+// пробілами (параметр string), і повертатиме найдовше слово у реченні.
+
+// Скористайтесь цим прикладом виклику функції для перевірки її роботи:
+// console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
+
+//? Рішення:
+//  function findLongestWord(string) {
+//   let arr = string.split(" ");
+//   let longest = arr[0];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].length > longest.length) {
+//       longest = arr[i];
+//     }
+//   }
+//   return longest;
+// }
+
+// console.log(findLongestWord("London is the capital of Great Britain"));
+
+//! Завдання 7:
+// Напишіть скрипт, який для об'єкту user, послідовно:
+// 1 - додасть поле mood зі значенням 'happy',
+// 2 - замінить hobby на 'skydiving',
+// 3 - замінить значення premium на false,
+// 4 - виведе зміст об'єкта user у форматі
+// '<ключ>:<значення>' використовуя Object.keys() та for...of
+
+// const user = {
+//     name: "John",
+//     age: 20,
+//     hobby: "tenis",
+//     premium: true,
+//   };
+
+// ? Рішення:
+//   const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tenis",
+//   premium: true,
+// };
+
+// user.mood;
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+
+// let keys = Object.keys(user);
+
+// for (let key of keys) {
+//   console.log(`${key}:${user[key]}`);
+// }
+
+// ! Завдання 8:
+// Є об'єкт, в якому зберігаються зарплати команди
+// Напишіть код для додавання усіх зарплат та
+// збережіть його результат в змінній sum.
+// Якщо об'єкт salaries пустий, то результат має бути 0
+
+// const salaries = {
+//     Mango: 100,
+//     Poly: 160,
+//     Ajax: 1470,
+//   };
+
+// ? Рішення:
+//   const salaries = {
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+
+//   let values = Object.values(salaries);
+
+//   for (let key of values) {
+//     totalSalary += key;
+//   }
+
+//   return totalSalary;
+// }
+
+// console.log(countTotalSalary(salaries));
+
+//! Завдання 9:
+// Створіть об'єкт calculator з наступними методами:
+// read(a, b) - приймає два аргумента і зберігає їх як властивості об'єкта,
+// sum() - повертає сумму збереженних значень (з перевіркою на наявність властивостей в об'єкті),
+// mult() - перемножає збереженні значення і повертає результат (з перевіркою на наявність властивостей в об'єкті),
+// винесіть перевірку на наявність властивостей в об'єкті в окремий метод exist().
+
+// Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
+// методи sum і mult мають повертати рядок 'No such propeties'
