@@ -1,3 +1,4 @@
+// !Завдання 1
 // 1 - отримай body елемент і виведи його в консоль;
 // 2 - отримай елемент id="title" і виведи його в консоль;
 // 3 - отримай елемент class="list" і виведи його в консоль;
@@ -20,89 +21,89 @@
 // 20 - очисти список
 
 // ? Рішення
-const body = document.querySelector("body");
-console.log(body);
+// const body = document.querySelector("body");
+// console.log(body);
 
-const title = document.querySelector("#title");
-console.log(title);
+// const title = document.querySelector("#title");
+// console.log(title);
 
-const list = document.querySelector(".list");
-console.log(list);
+// const list = document.querySelector(".list");
+// console.log(list);
 
-const topics = document.querySelectorAll("[data-topic]");
-console.log(topics);
+// const topics = document.querySelectorAll("[data-topic]");
+// console.log(topics);
 
-const firstEl = topics[0];
-console.log(firstEl);
+// const firstEl = topics[0];
+// console.log(firstEl);
 
-const lastEl = topics[topics.length - 1];
-console.log(lastEl);
+// const lastEl = topics[topics.length - 1];
+// console.log(lastEl);
 
-const nextAfterTitle = title.nextElementSibling;
-console.log(nextAfterTitle);
+// const nextAfterTitle = title.nextElementSibling;
+// console.log(nextAfterTitle);
 
-const allHeadings = document.querySelectorAll("h3");
-console.log(allHeadings);
+// const allHeadings = document.querySelectorAll("h3");
+// console.log(allHeadings);
 
-allHeadings.forEach((h3) => {
-  h3.classList.add("active");
-});
+// allHeadings.forEach((h3) => {
+//   h3.classList.add("active");
+// });
 
-const navigationItem = document.querySelector('li[data-topic="navigation"]');
-console.log(navigationItem);
+// const navigationItem = document.querySelector('li[data-topic="navigation"]');
+// console.log(navigationItem);
 
-navigationItem.style.backgroundColor = "yellow";
+// navigationItem.style.backgroundColor = "yellow";
 
-const pNavigation = navigationItem.querySelector("p");
-pNavigation.textContent = "Я змінила тут текст!";
+// const pNavigation = navigationItem.querySelector("p");
+// pNavigation.textContent = "Я змінила тут текст!";
 
-const currentTopic = "manipulation";
+// const currentTopic = "manipulation";
 
-const findEl = document.querySelector(`li[data-topic="${currentTopic}"]`);
+// const findEl = document.querySelector(`li[data-topic="${currentTopic}"]`);
 
-console.log(findEl);
+// console.log(findEl);
 
-findEl.style.backgroundColor = "blue";
+// findEl.style.backgroundColor = "blue";
 
-const headingCompleted = document.querySelector("h3.completed");
-console.log(headingCompleted);
+// const headingCompleted = document.querySelector("h3.completed");
+// console.log(headingCompleted);
 
-const removeLi = headingCompleted.closest("li");
-removeLi.remove();
+// const removeLi = headingCompleted.closest("li");
+// removeLi.remove();
 
-const pAfterH1 = document.createElement("p");
-pAfterH1.textContent = "Об'єктна модель документа (Document Object Model)";
+// const pAfterH1 = document.createElement("p");
+// pAfterH1.textContent = "Об'єктна модель документа (Document Object Model)";
 
-title.after(pAfterH1);
+// title.after(pAfterH1);
 
-const elementLi = document.createElement("li");
-const liH3 = document.createElement("h3");
-liH3.textContent = "Властивість innerHTML";
+// const elementLi = document.createElement("li");
+// const liH3 = document.createElement("h3");
+// liH3.textContent = "Властивість innerHTML";
 
-const liParag = document.createElement("p");
-liParag.textContent =
-  "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу";
+// const liParag = document.createElement("p");
+// liParag.textContent =
+//   "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу";
 
-elementLi.append(liH3, liParag);
-list.append(elementLi);
+// elementLi.append(liH3, liParag);
+// list.append(elementLi);
 
-list.insertAdjacentHTML(
-  "beforeend",
-  `
-  <li>
-    <h3>Властивість innerHTML</h3>
-    <p>
-      Ще один спосіб створити DOM-елементи і помістити їх в дерево -
-      це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу
-    </p>
-  </li>
-  `,
-);
+// list.insertAdjacentHTML(
+//   "beforeend",
+//   `
+//   <li>
+//     <h3>Властивість innerHTML</h3>
+//     <p>
+//       Ще один спосіб створити DOM-елементи і помістити їх в дерево -
+//       це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу
+//     </p>
+//   </li>
+//   `,
+// );
 
-list.innerHTML = "";
-// ?
+// list.innerHTML = "";
+// // ?
 
-// !Завдання
+// !Завдання 2
 // Створіть контейнер div (з класом number-container) в HTML-документі
 // та динамічно створіть 100 блоків (з класом number) наповнивши їх рандомними
 // числами від 1 до 100 і додайте їх до контейнера div(numberContainer).
@@ -111,33 +112,35 @@ list.innerHTML = "";
 
 // const randomNumber = () => Math.floor(Math.random() * 100) + 1;
 
-const numberContainer = document.querySelector(".number-container");
+// ?Рішення
+// const numberContainer = document.querySelector(".number-container");
 
-console.log("numberContainer:", numberContainer);
+// console.log("numberContainer:", numberContainer);
 
-const randomNumber = () => Math.floor(Math.random() * 100) + 1;
+// const randomNumber = () => Math.floor(Math.random() * 100) + 1;
 
-const fragment = document.createDocumentFragment();
+// const fragment = document.createDocumentFragment();
 
-for (let i = 0; i < 100; i += 1) {
-  const number = randomNumber();
+// for (let i = 0; i < 100; i += 1) {
+//   const number = randomNumber();
 
-  const div = document.createElement("div");
-  div.classList.add("number");
-  div.textContent = number;
+//   const div = document.createElement("div");
+//   div.classList.add("number");
+//   div.textContent = number;
 
-  if (number % 2 === 0) {
-    div.classList.add("even");
-  } else {
-    div.classList.add("odd");
-  }
+//   if (number % 2 === 0) {
+//     div.classList.add("even");
+//   } else {
+//     div.classList.add("odd");
+//   }
 
-  fragment.append(div);
-}
+//   fragment.append(div);
+// }
 
-numberContainer.append(fragment);
+// numberContainer.append(fragment);
 
-// ! Завдання
+// ! Завдання 3
+// ? Рішення
 // Form Events, Input, Focus, Blur and Submit.
 
 // Використовуй шаблон форми з файлу html.
@@ -168,9 +171,25 @@ input.addEventListener("input", () => {
 // якщо ж поле пусте, то зроби `outline` => `'3px solid red'`,
 // якщо при фокусі поле непусте, то `outline` => `'3px solid green'`
 
+input.addEventListener("focus", (event) => {
+  if (input.value.trim() === "") {
+    event.target.style.outline = "3px solid red";
+  } else {
+    event.target.style.outline = "3px solid green";
+  }
+});
+
 // 3 - При події `blur` зроби перевірку на пустоту поля інпута,
 // якщо ж поле пусте, то зроби `outline` => `'3px solid red'`,
 // якщо при фокусі поле непусте, то `outline` => `'3px solid lime'`
+
+input.addEventListener("blur", (event) => {
+  if (input.value.trim() === "") {
+    event.target.style.outline = "3px solid red";
+  } else {
+    event.target.style.outline = "3px solid lime";
+  }
+});
 
 // 4 - При події `submit`. Відміни поведінку браузера по змовчуванню.
 // Дістань данні з інпуту і чек боксу, зроби перевірку,
@@ -183,3 +202,53 @@ input.addEventListener("input", () => {
 // щоб на місце повернулось дефолтне знаяення "Anonymous".
 // При відправці форми, очисти інпут, верни чек бокс у положення
 // false, верни дефолтне значення "Anonymous" у span.
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const inputInfo = input.value.trim();
+  const checkInfo = checkbox.checked;
+
+  input.value = "";
+  checkbox.value = false;
+
+  if (inputInfo.trim() !== "" && checkInfo) {
+    const obj = {
+      input: inputInfo,
+      checkbox: checkInfo,
+    };
+    console.log(obj);
+
+    input.value = "";
+    checkbox.checked = false;
+    nameOutput.textContent = "Anonymous";
+    input.classList.remove("success", "error");
+    input.style.outline = "";
+  } else {
+    alert("Введіть ім'я і поставте галочку");
+  }
+});
+
+// ! Завдання 4
+// Використовуй шаблон розмітки з файлу html та напиши наступний функціонал:
+// При кліку на кнопку "Зменшити" квадрат стає меньшим на 20 пікселів,
+// При кліку на кнопку "Збільшити" - квадрат стає більшим на 20 пікселів.
+
+const decrease = document.querySelector(".js-decrease");
+const increase = document.querySelector(".js-increase");
+const box = document.querySelector(".box");
+
+decrease.addEventListener("click", () => {
+  const height = box.offsetHeight;
+
+  if (height <= 20) return;
+
+  box.style.height = `${height - 20}px`;
+});
+
+increase.addEventListener("click", (event) => {
+  const moreBoxHeight = box.offsetHeight;
+  const moreHeight = moreBoxHeight + 20;
+
+  box.style.height = `${moreHeight}px`;
+});
